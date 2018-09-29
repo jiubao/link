@@ -1,6 +1,6 @@
 {
   "name": "@jiubao/link",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a simple link",
   "main": "dist/link.es.js",
   "browser": "dist/link.umd.js",

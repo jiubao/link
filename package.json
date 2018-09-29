@@ -1,0 +1,33 @@
+{
+  "name": "@jiubao/link",
+  "version": "0.0.0",
+  "description": "a simple link",
+  "main": "dist/link.es.js",
+  "browser": "dist/link.umd.js",
+  "module": "dist/link.es.js",
+  "cjs": "dist/link.cjs.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rm -rf dist && rollup -c && npm run minify",
+    "minify": "uglifyjs $npm_package_browser -cm -o $npm_package_browser",
+    "release": "npm run build && npm run minify && standard-version && git push --follow-tags && npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiubao/link.git"
+  },
+  "keywords": [
+    "link"
+  ],
+  "author": "jiubao <xia.ldj@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiubao/link/issues"
+  },
+  "homepage": "https://github.com/jiubao/link#readme",
+  "devDependencies": {
+    "rollup": "^0.66.2",
+    "rollup-plugin-buble": "^0.19.2",
+    "standard-version": "^4.4.0"
+  }
+}
